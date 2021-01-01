@@ -83,8 +83,14 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
+#PRODUCT_PACKAGES += \
+#    Snap
+
+#Google Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Googlecamera \
+    libcvface_api \
+    libqti-perfd-client
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -139,6 +145,14 @@ PRODUCT_PACKAGES += \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
+
+# OnePlusGallery
+PRODUCT_PACKAGES += \
+    OnePlusGallery
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
+    $(LOCAL_PATH)/prebuilt/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml:system/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml
 
 # Power
 PRODUCT_PACKAGES += \
